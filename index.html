@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Slait Hiring Platform</title>
+  <title>AI Resume Screening App</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -21,7 +22,7 @@
     }
 
     header{
-      background:#0f172a;
+      background:#111827;
       color:white;
       padding:20px 8%;
 
@@ -66,6 +67,31 @@
       margin:10px;
     }
 
+    .upload-section{
+      padding:60px 8%;
+      text-align:center;
+    }
+
+    .upload-box{
+      background:white;
+      padding:40px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      max-width:500px;
+      margin:auto;
+    }
+
+    input[type=file]{
+      margin:20px 0;
+    }
+
+    .result{
+      margin-top:20px;
+      font-size:20px;
+      color:#2563eb;
+      font-weight:bold;
+    }
+
     .features{
       padding:60px 8%;
     }
@@ -94,48 +120,19 @@
       margin-bottom:15px;
     }
 
-    .pricing{
-      padding:60px 8%;
-      background:#eaf1ff;
-    }
-
-    .pricing-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .price-card{
-      background:white;
-      padding:30px;
-      border-radius:15px;
-      text-align:center;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .price{
-      font-size:40px;
-      color:#2563eb;
-      margin:20px 0;
-    }
-
-    .price-card ul{
-      list-style:none;
-      margin-bottom:20px;
-    }
-
-    .price-card ul li{
-      margin:10px 0;
-    }
-
     footer{
-      background:#0f172a;
+      background:#111827;
       color:white;
       text-align:center;
       padding:20px;
+      margin-top:40px;
     }
 
     @media(max-width:768px){
+
+      .hero h1{
+        font-size:32px;
+      }
 
       header{
         flex-direction:column;
@@ -144,123 +141,98 @@
       nav{
         margin-top:15px;
       }
-
-      .hero h1{
-        font-size:32px;
-      }
     }
+
   </style>
+
 </head>
 
 <body>
 
   <header>
-    <h2>Slait</h2>
+
+    <h2>AI Resume Screener</h2>
 
     <nav>
       <a href="#">Home</a>
       <a href="#">Features</a>
-      <a href="#">Pricing</a>
+      <a href="#">Upload</a>
       <a href="#">Contact</a>
     </nav>
+
   </header>
 
   <section class="hero">
 
-    <h1>The Fastest Way to Evaluate Candidates</h1>
+    <h1>AI Powered Resume Screening Application</h1>
 
     <p>
-      AI-powered platform for candidate ranking,
-      coding assessments, and hiring automation.
+      Upload resumes and let AI analyze candidate skills,
+      experience, and matching scores instantly.
     </p>
 
-    <button class="btn">Start for Free</button>
+    <button class="btn">Get Started</button>
 
-    <button class="btn">See How it Works</button>
+  </section>
+
+  <section class="upload-section">
+
+    <h2 class="section-title">Upload Resume</h2>
+
+    <div class="upload-box">
+
+      <input type="file" id="resumeFile">
+
+      <br>
+
+      <button class="btn" onclick="analyzeResume()">
+        Analyze Resume
+      </button>
+
+      <div class="result" id="result"></div>
+
+    </div>
 
   </section>
 
   <section class="features">
 
     <h2 class="section-title">
-      Everything You Need to Hire Better
+      Features
     </h2>
 
     <div class="feature-grid">
 
       <div class="card">
-        <h3>AI Analysis</h3>
+        <h3>AI Resume Analysis</h3>
 
         <p>
-          Automatically evaluate candidate code quality
-          and best practices.
+          Automatically analyze skills and qualifications.
         </p>
       </div>
 
       <div class="card">
-        <h3>Real-time Ranking</h3>
+        <h3>Candidate Scoring</h3>
 
         <p>
-          Compare candidates instantly using smart AI scoring.
+          Generate AI-based candidate match scores instantly.
         </p>
       </div>
 
       <div class="card">
-        <h3>Role-Based Assessments</h3>
+        <h3>Fast Screening</h3>
 
         <p>
-          Create custom assessments for different job roles.
+          Save recruiter time with automated filtering.
         </p>
       </div>
 
       <div class="card">
-        <h3>Instant Feedback</h3>
+        <h3>Easy Upload</h3>
 
         <p>
-          Get strengths, weaknesses and summaries instantly.
+          Upload resumes in PDF or DOC format easily.
         </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="pricing">
-
-    <h2 class="section-title">Pricing Plans</h2>
-
-    <div class="pricing-grid">
-
-      <div class="price-card">
-
-        <h3>Starter</h3>
-
-        <div class="price">Free</div>
-
-        <ul>
-          <li>3 Roles</li>
-          <li>10 Assessments</li>
-          <li>Email Support</li>
-        </ul>
-
-        <button class="btn">Get Started</button>
-
-      </div>
-
-      <div class="price-card">
-
-        <h3>Pro</h3>
-
-        <div class="price">$49/mo</div>
-
-        <ul>
-          <li>Unlimited Roles</li>
-          <li>Unlimited Assessments</li>
-          <li>Advanced AI Insights</li>
-        </ul>
-
-        <button class="btn">Get Started</button>
-
       </div>
 
     </div>
@@ -270,11 +242,44 @@
   <footer>
 
     <p>
-      © 2026 Slait Hiring Platform
+      © 2026 AI Resume Screening Application
     </p>
 
   </footer>
 
+  <script>
+
+    function analyzeResume(){
+
+      let file =
+      document.getElementById("resumeFile").files[0];
+
+      let result =
+      document.getElementById("result");
+
+      if(file){
+
+        let score =
+        Math.floor(Math.random()*40)+60;
+
+        result.innerHTML =
+        "Resume Score: " + score + "% Match";
+
+      }
+
+      else{
+
+        result.innerHTML =
+        "Please upload a resume file.";
+
+      }
+
+    }
+
+  </script>
+
 </body>
 
 </html>
+
+  
