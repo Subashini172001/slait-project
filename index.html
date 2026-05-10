@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Slait Hiring Platform</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#222;
+    }
+
+    header{
+      background:#0f172a;
+      color:white;
+      padding:20px 8%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:bold;
+    }
+
+    .hero{
+      background:linear-gradient(to right,#2563eb,#1e3a8a);
+      color:white;
+      text-align:center;
+      padding:100px 20px;
+    }
+
+    .hero h1{
+      font-size:45px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:18px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border:none;
+      border-radius:8px;
+      background:white;
+      color:#2563eb;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      margin:10px;
+    }
+
+    .features{
+      padding:60px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:35px;
+      margin-bottom:40px;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card h3{
+      color:#2563eb;
+      margin-bottom:15px;
+    }
+
+    .pricing{
+      padding:60px 8%;
+      background:#eaf1ff;
+    }
+
+    .pricing-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .price-card{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .price{
+      font-size:40px;
+      color:#2563eb;
+      margin:20px 0;
+    }
+
+    .price-card ul{
+      list-style:none;
+      margin-bottom:20px;
+    }
+
+    .price-card ul li{
+      margin:10px 0;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero h1{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Slait</h2>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+
+    <h1>The Fastest Way to Evaluate Candidates</h1>
+
+    <p>
+      AI-powered platform for candidate ranking,
+      coding assessments, and hiring automation.
+    </p>
+
+    <button class="btn">Start for Free</button>
+
+    <button class="btn">See How it Works</button>
+
+  </section>
+
+  <section class="features">
+
+    <h2 class="section-title">
+      Everything You Need to Hire Better
+    </h2>
+
+    <div class="feature-grid">
+
+      <div class="card">
+        <h3>AI Analysis</h3>
+
+        <p>
+          Automatically evaluate candidate code quality
+          and best practices.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Real-time Ranking</h3>
+
+        <p>
+          Compare candidates instantly using smart AI scoring.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Role-Based Assessments</h3>
+
+        <p>
+          Create custom assessments for different job roles.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Instant Feedback</h3>
+
+        <p>
+          Get strengths, weaknesses and summaries instantly.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="pricing">
+
+    <h2 class="section-title">Pricing Plans</h2>
+
+    <div class="pricing-grid">
+
+      <div class="price-card">
+
+        <h3>Starter</h3>
+
+        <div class="price">Free</div>
+
+        <ul>
+          <li>3 Roles</li>
+          <li>10 Assessments</li>
+          <li>Email Support</li>
+        </ul>
+
+        <button class="btn">Get Started</button>
+
+      </div>
+
+      <div class="price-card">
+
+        <h3>Pro</h3>
+
+        <div class="price">$49/mo</div>
+
+        <ul>
+          <li>Unlimited Roles</li>
+          <li>Unlimited Assessments</li>
+          <li>Advanced AI Insights</li>
+        </ul>
+
+        <button class="btn">Get Started</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <p>
+      © 2026 Slait Hiring Platform
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
